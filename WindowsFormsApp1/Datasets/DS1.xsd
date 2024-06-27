@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS1" targetNamespace="http://tempuri.org/DS1.xsd" xmlns:mstns="http://tempuri.org/DS1.xsd" xmlns="http://tempuri.org/DS1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS1" msprop:Generator_UserDSName="DS1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Main_Task" msprop:Generator_TableClassName="Main_TaskDataTable" msprop:Generator_TableVarName="tableMain_Task" msprop:Generator_TablePropName="Main_Task" msprop:Generator_RowDeletingName="Main_TaskRowDeleting" msprop:Generator_RowChangingName="Main_TaskRowChanging" msprop:Generator_RowEvHandlerName="Main_TaskRowChangeEventHandler" msprop:Generator_RowDeletedName="Main_TaskRowDeleted" msprop:Generator_UserTableName="Main_Task" msprop:Generator_RowChangedName="Main_TaskRowChanged" msprop:Generator_RowEvArgName="Main_TaskRowChangeEvent" msprop:Generator_RowClassName="Main_TaskRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nu_Task" msprop:Generator_ColumnVarNameInTable="columnNu_Task" msprop:Generator_ColumnPropNameInRow="Nu_Task" msprop:Generator_ColumnPropNameInTable="Nu_TaskColumn" msprop:Generator_UserColumnName="Nu_Task" type="xs:string" />
+              <xs:element name="Date_Task" msprop:Generator_ColumnVarNameInTable="columnDate_Task" msprop:Generator_ColumnPropNameInRow="Date_Task" msprop:Generator_ColumnPropNameInTable="Date_TaskColumn" msprop:Generator_UserColumnName="Date_Task" type="xs:string" minOccurs="0" />
+              <xs:element name="Start_date" msprop:Generator_ColumnVarNameInTable="columnStart_date" msprop:Generator_ColumnPropNameInRow="Start_date" msprop:Generator_ColumnPropNameInTable="Start_dateColumn" msprop:Generator_UserColumnName="Start_date" type="xs:string" minOccurs="0" />
+              <xs:element name="End_date" msprop:Generator_ColumnVarNameInTable="columnEnd_date" msprop:Generator_ColumnPropNameInRow="End_date" msprop:Generator_ColumnPropNameInTable="End_dateColumn" msprop:Generator_UserColumnName="End_date" type="xs:string" minOccurs="0" />
+              <xs:element name="Txt_Task" msprop:Generator_ColumnVarNameInTable="columnTxt_Task" msprop:Generator_ColumnPropNameInRow="Txt_Task" msprop:Generator_ColumnPropNameInTable="Txt_TaskColumn" msprop:Generator_UserColumnName="Txt_Task" type="xs:string" minOccurs="0" />
+              <xs:element name="Type_Task" msprop:Generator_ColumnVarNameInTable="columnType_Task" msprop:Generator_ColumnPropNameInRow="Type_Task" msprop:Generator_ColumnPropNameInTable="Type_TaskColumn" msprop:Generator_UserColumnName="Type_Task" type="xs:string" minOccurs="0" />
+              <xs:element name="Na_location" msprop:Generator_ColumnVarNameInTable="columnNa_location" msprop:Generator_ColumnPropNameInRow="Na_location" msprop:Generator_ColumnPropNameInTable="Na_locationColumn" msprop:Generator_UserColumnName="Na_location" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Pranch_Task" msprop:Generator_TableClassName="Pranch_TaskDataTable" msprop:Generator_TableVarName="tablePranch_Task" msprop:Generator_TablePropName="Pranch_Task" msprop:Generator_RowDeletingName="Pranch_TaskRowDeleting" msprop:Generator_RowChangingName="Pranch_TaskRowChanging" msprop:Generator_RowEvHandlerName="Pranch_TaskRowChangeEventHandler" msprop:Generator_RowDeletedName="Pranch_TaskRowDeleted" msprop:Generator_UserTableName="Pranch_Task" msprop:Generator_RowChangedName="Pranch_TaskRowChanged" msprop:Generator_RowEvArgName="Pranch_TaskRowChangeEvent" msprop:Generator_RowClassName="Pranch_TaskRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nu_Emp" msprop:Generator_ColumnVarNameInTable="columnNu_Emp" msprop:Generator_ColumnPropNameInRow="Nu_Emp" msprop:Generator_ColumnPropNameInTable="Nu_EmpColumn" msprop:Generator_UserColumnName="Nu_Emp" type="xs:string" minOccurs="0" />
+              <xs:element name="Na_emp" msprop:Generator_ColumnVarNameInTable="columnNa_emp" msprop:Generator_ColumnPropNameInRow="Na_emp" msprop:Generator_ColumnPropNameInTable="Na_empColumn" msprop:Generator_UserColumnName="Na_emp" type="xs:string" minOccurs="0" />
+              <xs:element name="Na_jop" msprop:Generator_ColumnVarNameInTable="columnNa_jop" msprop:Generator_ColumnPropNameInRow="Na_jop" msprop:Generator_ColumnPropNameInTable="Na_jopColumn" msprop:Generator_UserColumnName="Na_jop" type="xs:string" minOccurs="0" />
+              <xs:element name="Nu_Task" msprop:Generator_ColumnVarNameInTable="columnNu_Task" msprop:Generator_ColumnPropNameInRow="Nu_Task" msprop:Generator_ColumnPropNameInTable="Nu_TaskColumn" msprop:Generator_UserColumnName="Nu_Task" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -166,8 +166,9 @@ namespace WindowsFormsApp1
                     change_pass = Convert.ToByte(rdr["Change_password"]);
                     re_ch_pass = Convert.ToByte(rdr["Re_change"]);
                     dbcon.NU_Emp_log = Convert.ToInt32(rdr["Nu_Emp"]);
+                    dbcon.NA_Emp_log = Convert.ToString(rdr["Username"]);
                     dbcon.User_Power = Convert.ToString(rdr["User_power"]);
-                    dbcon.NA_Emp_log = name.Text;
+                    
 
                     rdr.Close();
                     cdcom.Dispose();
@@ -338,18 +339,31 @@ namespace WindowsFormsApp1
            cdcom.Parameters.AddWithValue("@p1", 0);
            cdcom.ExecuteNonQuery();
 
-               //// Save changes logic (if applicable)
-               // DateTime d1 = DateTime.Now;
-               // sql_str = "BACKUP DATABASE [DATATASKMA] TO DISK = D:/Backups/MyDatabaseBackup" + d1.ToString("dd-MM-yyyy") + ".bak";
-               // SqlCommand command = new SqlCommand(sql_str, dbcon.conn_db());
-               // command.ExecuteNonQuery();
-               // MessageBox.Show("تم إنشاء نسخة احتياطية بنجاح", "حفظ");
-                             
+           //DateTime d1 = DateTime.Now;
+
+           // sql_str = "BACKUP DATABASE [DATATASKMA] TO DISK = N'C:\\Users\\AL DALEL\\VStudio Files Nuha\\Task Order Managment System\\DB Backup\\datatask" + d1.ToString("dd-MM-yyyy_hh-mm-ss") + ".bak' WITH NOFORMAT, INIT, NAME = N'DATATASKMA-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10";
+           // cdcom = new SqlCommand(sql_str, dbcon.conn_db());
+           // cdcom.ExecuteNonQuery();
+
+
+
+            //// Save changes logic (if applicable)
+            // DateTime d1 = DateTime.Now;
+            // sql_str = "BACKUP DATABASE [DATATASKMA] TO DISK = D:/Backups/MyDatabaseBackup" + d1.ToString("dd-MM-yyyy") + ".bak";
+            // SqlCommand command = new SqlCommand(sql_str, dbcon.conn_db());
+            // command.ExecuteNonQuery();
+            // MessageBox.Show("تم إنشاء نسخة احتياطية بنجاح", "حفظ");
+
         }
 
         private void mytaskbutton_Click(object sender, EventArgs e)
         {
             taskgridpanel.Visible = true;
+            datapanel.Visible = false;
+            settingpanel.Visible = false;
+            aboutpanel.Visible = false;
+            loginpanel.Visible = false;
+            querypanel.Visible = false;
         }
 
         private void databutton_Click(object sender, EventArgs e)
@@ -367,31 +381,48 @@ namespace WindowsFormsApp1
         {
             try
             {
-                // Replace "YourDatabaseName" with your actual value
-                string databaseName = "DATATASKMA";
-                string backupFileName = $"{databaseName}_{DateTime.Now:yyyy/MM/dd_(HH:mm:ss)}.bak";
-                string backupPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DB Backup2", backupFileName);
-                //C:\\Users\\AL DALEL\\VStudio Files Nuha\\Task Order Managment System\\DB Backup
+                DateTime d1 = DateTime.Now;
 
-                // Build the backup command
-                string backupCommand = $"BACKUP DATABASE [{databaseName}] TO  DISK = N'{backupPath}' WITH FORMAT";
+                sql_str = "BACKUP DATABASE [DATATASKMA] TO DISK = N'C:\\Users\\AL DALEL\\VStudio Files Nuha\\Task Order Managment System\\DB Backup\\datatask_" + d1.ToString("dd-MM-yyyy_hh-mm-ss") + ".bak' WITH NOFORMAT, INIT, NAME = N'DATATASKMA-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10";
+                cdcom = new SqlCommand(sql_str, dbcon.conn_db());
+                cdcom.ExecuteNonQuery();
 
-                // Use DBConnection class for connection and command execution
-                DBConnection dbConnection = new DBConnection();
-                SqlConnection connection = dbConnection.conn_db();
-
-                // Execute the backup command
-                cdcom = new SqlCommand(backupCommand, dbcon.conn_db());
-                rdr = cdcom.ExecuteReader();
-                rdr.Close();
-
-                MessageBox.Show($"تم النسخ الاحتياطي لقاعدة البيانات إلى {backupPath} بنجاح", "نجاح");
+                MessageBox.Show($"تم النسخ الاحتياطي لقاعدة البيانات  بنجاح", "نجاح");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"حدث خطأ أثناء backup قاعدة البيانات: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"حدث خطأ أثناء النسخ الاحتياطي لقاعدة البيانات: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+
+    ////C:\\Users\\AL DALEL\\VStudio Files Nuha\\Task Order Managment System\\DB Backup
+
+    //try
+    //{
+    //    string databaseName = "DATATASKMA";
+    //    string backupPath = @"C:\MyApplicationBackups\";
+    //    string backupFileName = Path.Combine(backupPath, $"{databaseName}-{DateTime.Now:yyyy/MM/dd_(HH:mm:ss)}.bak");
+
+    //    // Build the backup command
+    //    string backupCommand = $"BACKUP DATABASE [{databaseName}] TO DISK = '{backupFileName}' WITH FORMAT";
+
+    //    // Use DBConnection class for connection and command execution
+    //    DBConnection dbConnection = new DBConnection();
+    //    SqlConnection connection = dbConnection.conn_db();
+
+    //    // Execute the backup command
+    //    SqlCommand cdcom = new SqlCommand(backupCommand, connection);
+    //    cdcom.ExecuteNonQuery();
+
+    //    // Close the connection
+    //    connection.Close(); 
+
+    //    MessageBox.Show($"تم النسخ الاحتياطي لقاعدة البيانات إلى {backupPath} بنجاح", "نجاح");
+    //}
+    //catch (Exception ex)
+    //{
+    //    MessageBox.Show($"حدث خطأ أثناء backup قاعدة البيانات: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    //}
+}
 
         private void reportbutton_Click(object sender, EventArgs e)
         {

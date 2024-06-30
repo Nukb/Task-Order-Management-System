@@ -26,7 +26,7 @@ namespace WindowsFormsApp1.Forms
 
         private void Users_Load(object sender, EventArgs e)
         {
-            searchOptions.SelectedIndex = -1;
+            searchOptions.SelectedIndex = 0;
             Active_state.SelectedIndex = 0;
         }
 
@@ -135,7 +135,7 @@ namespace WindowsFormsApp1.Forms
                 {
                     exp_pass.Checked = false;
                     change_pass.Checked = false;
-                    Active_state.SelectedIndex = -1;
+                    Active_state.SelectedIndex = 0;
                     user_name.Text = nu_Em.Text;
                     password1.Text = nu_Em.Text;
                     password2.Text = nu_Em.Text;
@@ -279,7 +279,7 @@ namespace WindowsFormsApp1.Forms
                 cdcom.Parameters.AddWithValue("@p4", Active_state.Text);
                 cdcom.Parameters.AddWithValue("@p5", exp_pass.Checked);
                 cdcom.Parameters.AddWithValue("@p6", change_pass.Checked);
-                cdcom.Parameters.AddWithValue("@p7", "1");
+                cdcom.Parameters.AddWithValue("@p7", "1000000000000");
                 cdcom.Parameters.AddWithValue("@p8", 0);
                 cdcom.Parameters.AddWithValue("@p9", 0);
                 cdcom.Parameters.AddWithValue("@p10", 0);

@@ -7,7 +7,7 @@
     <ProjectGuid>{A9BA1E68-7711-4AC4-87F7-8C0A5761E240}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>WindowsFormsApp1</RootNamespace>
-    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <AssemblyName>Task Order Managment System</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>33.ico</ApplicationIcon>
+    <ApplicationIcon>TaskfLow.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -222,7 +222,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="33.ico" />
     <None Include="Resources\icons8-lock-orientation-32.png" />
     <None Include="Resources\icons8-member-32.png" />
     <None Include="Resources\icons8-settingss-32.png" />
@@ -246,7 +245,8 @@
     <None Include="Resources\icons8-printer-32.png" />
     <None Include="Resources\icons8-documents-48.png" />
     <None Include="Resources\icons8-document-32.png" />
-    <Content Include="Taskiii-Icon.ico" />
+    <None Include="Resources\TaskfLowPNG.ico" />
+    <Content Include="TaskfLow.ico" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

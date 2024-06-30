@@ -66,7 +66,7 @@ namespace WindowsFormsApp1.Forms
                 return;
             }
 
-            sql_str = "SELECT [User_type] FROM [dbo].[Ta_Users] WHERE (Nu_Emp=" + dbcon.NU_Emp_log + ") AND (Password=" + password1.Text + ")";
+            sql_str = "SELECT [User_type] FROM [dbo].[Ta_Users] WHERE (Username=" + User_name.Text + ") AND (Password=" + password1.Text + ")";
             cdcom = new SqlCommand(sql_str, dbcon.conn_db());
             rdr = cdcom.ExecuteReader();
 
@@ -83,7 +83,7 @@ namespace WindowsFormsApp1.Forms
                 return;
             }
 
-            sql_str = "UPDATE [dbo].[Ta_Users] SET [Password]=@p1 WHERE (Nu_Emp=" + dbcon.NU_Emp_log + ") AND (Password=" + password1.Text + ")";
+            sql_str = "UPDATE [dbo].[Ta_Users] SET [Password]=@p1 WHERE (Username=" + User_name.Text + ") AND (Password=" + password1.Text + ")";
             cdcom = new SqlCommand(sql_str, dbcon.conn_db());
             cdcom.Parameters.AddWithValue("@p1", password2.Text);
             cdcom.ExecuteNonQuery();

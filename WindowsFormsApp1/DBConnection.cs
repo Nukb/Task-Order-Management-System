@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         public SqlConnection conn_db()
         {
-            dbcon = new SqlConnection(@"server=DESKTOP-QH0F62T\SQLEXPRESS;database=DATATASKMA;Trusted_Connection=True;");
+            dbcon = new SqlConnection(@"server= ;database= ;Trusted_Connection=True;");
             if (dbcon.State == ConnectionState.Closed)
             {
                 dbcon.Open();
